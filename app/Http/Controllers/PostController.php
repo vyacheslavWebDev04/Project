@@ -21,7 +21,11 @@ class PostController extends Controller
         // $posts = Post::where('category_id', $category->id)->get();
         // dd($posts);
 
-        $posts = Post::all();
+        $post = Post::find(1);
+        $category = Category::find(1);
+        $tag = Tag::find(1);
+        dd($post->tags);
+//        dd($category->posts);
         return view('Post.index', compact('posts'));
     }
 
